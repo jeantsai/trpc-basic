@@ -27,6 +27,16 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@trpc/client@^10.16.0":
+  version "10.16.0"
+  resolved "https://webexci2.cisco.com:8443/repository/npm-group/@trpc/client/-/client-10.16.0.tgz#665fc51f849808090ed21b3467190b0d1e7089d9"
+  integrity sha512-Hxxi3mOcUyszosj6xpPDIIBV1TOhXKpZ191BW/60r1lXBAfNrDUWHOTol1Dfu+hpcx4bpj3WRyob5cf+6KeCDA==
+
+"@trpc/server@^10.16.0":
+  version "10.16.0"
+  resolved "https://webexci2.cisco.com:8443/repository/npm-group/@trpc/server/-/server-10.16.0.tgz#eda8f443852c6fb3791294ac936e49659346b221"
+  integrity sha512-lCUq7AB7vcgrNbaN+xP/AN62OjKDgrRyG7fTDPv5K633ut7KJ3m57qs60VRBOgp9vow6elAg51pKFFDtPHbTRA==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://webexci2.cisco.com:8443/repository/npm-group/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -110,3 +120,8 @@ yn@3.1.1:
   version "3.1.1"
   resolved "https://webexci2.cisco.com:8443/repository/npm-group/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
+
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://webexci2.cisco.com:8443/repository/npm-group/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==

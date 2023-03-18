@@ -6,5 +6,10 @@
   "devDependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.16.0",
+    "@trpc/server": "^10.16.0",
+    "zod": "^3.21.4"
   }
 }
