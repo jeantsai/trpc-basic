@@ -11,7 +11,13 @@ const trpc = createTRPCProxyClient<AppRouter>({
 
 async function main() {
   const user = await trpc.userById.query("1");
-  console.log("userById:", user);
+  console.log("userById:\n", user);
+  let users = await trpc.userAll.query();
+  console.log("userAll:\n", users);
+  console.log("Adding new user");
+  await trpc.userCreate.mutate({ name: "测试用户"} );
+  users = await trpc.userAll.query();
+  console.log("添加用户之后:\n", users);
 }
 
 void main();

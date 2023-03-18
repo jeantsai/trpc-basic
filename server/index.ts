@@ -1,5 +1,6 @@
 import { initTRPC } from "@trpc/server";
-import { createHTTPServer } from "@trpc/server/adapters/standalone"
+import { createHTTPServer } from "@trpc/server/adapters/standalone";
+import { z } from "zod";
 
 const t = initTRPC.create();
 const publicProcedure = t.procedure;
@@ -21,6 +22,8 @@ const users: User[] = [
 ];
 
 const appRouter = t.router({
+  userAll: publicProcedure
+    .query(() => users),
   userById: publicProcedure
     .input((val: unknown) => {
       if (typeof val === "string") return val;
@@ -30,7 +33,21 @@ const appRouter = t.router({
       const { input } = req;
       const user = users.find(u => u.id === input);
       return user;
-    })
+    }),
+  userCreate: publicProcedure
+    .input(z
+      .object({
+        name: z.string(),
+      }))
+    .mutation((req) => {
+      const id = `${Math.round(1000000 * Math.random())}`;
+      const user = {
+        id,
+        name: req.input.name,
+      };
+      users.push(user)
+      return user;
+    }),
 });
 
 createHTTPServer({
